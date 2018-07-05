@@ -9,9 +9,10 @@ class Solution:
             if nums[i-1] != nums[i]: 
                 nums[counter] = nums[i]
                 counter += 1
-        return nums
+        #return nums
     
 if __name__ == '__main__':
     nums = [0,0,1,1,1,2,2,3,3,4]
     #nums = [1,1,1]
-    print(Solution().removeDuplicates(nums))
+    Solution().removeDuplicates(nums)
+    print(nums)
