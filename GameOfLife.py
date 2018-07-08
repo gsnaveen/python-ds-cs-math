@@ -1,4 +1,3 @@
-
 # Output: 
 # [
 #   [0,0,0],
@@ -48,14 +47,10 @@ class Solution:
     def getAdj(self, row,col,rows,cols):
         return_valid_list = []
         
-        adjx = [(row -1,col-1)
-              ,(row -1,col)
-              ,(row -1,col+1)
-              ,(row ,col-1)
-              ,(row ,col+1)
-              ,(row +1,col-1)
-              ,(row +1,col)
-              ,(row +1,col+1) 
+        adjx = [
+               (row -1,col-1) ,(row -1,col) ,(row -1,col+1)
+              ,(row ,col-1)                  ,(row ,col+1)
+              ,(row +1,col-1)  ,(row +1,col) ,(row +1,col+1) 
               ]
         
         for adjcheck in adjx:
