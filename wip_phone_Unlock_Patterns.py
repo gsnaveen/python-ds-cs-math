@@ -15,6 +15,8 @@ class Solution:
         
         rows = len(dail)
         cols = len(dail[0])
+        
+        #creating Adjunct list  
         for row in range(rows):
             for col in range(cols):
                 myDictNumbers[(row,col)] = dail[row][col]
