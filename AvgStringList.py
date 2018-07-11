@@ -4,10 +4,13 @@ def AvgStringList(stringlist):
     for in_string in stringlist:
         word_list = in_string.split(" ")
         for word in word_list:
-            wordCount += 1
+            validWord = False
             for char in word:
                 if char.isalpha() or char.isdigit():
                     wordLength += 1
+                    validWord = True
+            if validWord: wordCount += 1
+                
     return wordLength/wordCount
 
 stringlist = ["Hello World!", "Welcome to CoderPad.", "This pad is running Python 3."]
