@@ -15,16 +15,20 @@ def paran(inStr):
             myMatch[index] = -1
         elif dq and char == ")":
             myMatch[dq.pop()] = index
+        elif  char == ")":
+            myMatch[index] = -2
+            
 
     for key in myMatch.keys():
         
-        if myMatch[key] != -1:
+        if myMatch[key] not in (-1,-2):
             lengthOf += 2
             maxLengthOf = max(maxLengthOf,lengthOf)
         else:
             lengthOf = 0 
         
-    print(maxLengthOf)
+#     print(maxLengthOf)
+#     print(myMatch)
     return maxLengthOf
 
 assert paran("((((())(((()") == 4 #"(())"
@@ -33,4 +37,5 @@ assert paran("()()()") == 6
 assert paran("")  == 0
 assert paran("((())()())()") == 12
 assert paran("()()()((()()()()") == 8
-assert paran("()()()()((()()())))") == 18
+assert paran("()()()()((()()())))()") == 18
+assert paran("())))()()())))((()()())))()") == 10
