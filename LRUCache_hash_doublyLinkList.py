@@ -11,7 +11,7 @@ class Node():
 		self.head = None
 		self.tail = None
 
-class toCacheData():
+class Network():
 	fileSystem = { 1:1111,
 					2:2222,
 					3:3333,
@@ -34,8 +34,7 @@ class doublylinklist():
 	def __init__(self,size):
 
 		self.cacheSize = size
-
-		self.network = toCacheData()
+		self.network = Network()
 
 	def getItem(self,item):
 		#Check if item exist in the cache
