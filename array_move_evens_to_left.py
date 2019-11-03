@@ -13,3 +13,17 @@ while i < length and j < length:
     j += 1
     
 print(myArr)  
+
+
++++++++++++++++++++++++++++++++++++++++++++++
+
+pointer = 0
+
+for index, value in enumerate(val):
+
+    if value % 2 == 0:
+        val[pointer], val[index] =  val[index], val[pointer]
+        pointer += 1
+
+
+print(val)
