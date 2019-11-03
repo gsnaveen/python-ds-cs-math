@@ -9,4 +9,4 @@ print(isinstance(fooInstance, (list, tuple)))
 print(isinstance(fooInstance, (list, tuple, Foo)))
 
 import sys
-sys.setrecursionlevel(10**6)
+sys.setrecursionlimit(10**6)
