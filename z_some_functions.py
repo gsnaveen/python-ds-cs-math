@@ -10,3 +10,7 @@ print(isinstance(fooInstance, (list, tuple, Foo)))
 
 import sys
 sys.setrecursionlimit(10**6)
+
+
+import json
+json.loads(dictString) # Converting String into a dictionary
