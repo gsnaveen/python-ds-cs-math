@@ -1,5 +1,6 @@
 isdigit()
 isalpha()
+isalnum()
 isinstance(val,dict)
 class Foo:
   a = 5
