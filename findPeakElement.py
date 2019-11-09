@@ -1,7 +1,7 @@
 class solution:
 
     def findPeakElement(self,nums) -> int:
-        index = 1;value = 0
+        index = float('-inf');value = 0
         la = len(nums)
         for i in range(1,la -1):
             if  (nums[i] > nums[i -1]) and (nums[i] > nums[i + 1]):
