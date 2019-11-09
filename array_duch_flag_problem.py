@@ -1,20 +1,26 @@
-instr = '001121211002'
+class Solution:
+    # @param A a list of integers
+    # @return nothing, sort in place
+    def sortColors(self, A):
 
-instr = list(instr)
-mylen = len(instr)
-midPointer = 0 
-index = 0
-runner = 0
-while  index < mylen and runner <  mylen:
-    
-    if instr[index] == "0":
-        instr.insert(0,instr.pop(index))
-        index += 1
-    elif instr[index] == "1":
-        index += 1
-    elif instr[index] == "2":
-        instr.append(instr.pop(index))
-        
-    runner += 1
+        f,s,l = 0,0,len(A) -1
+        lenS = len(A) -1
+        A = list(A)
 
-print("".join(instr))
+        while s <= l:
+            val = int(A[s])
+            if val == 0:
+                A[f],A[s] = A[s],A[f]
+                f += 1
+                s += 1
+            elif val == 2:
+                A[l], A[s] = A[s], A[l]
+                l -= 1
+            else:
+                s += 1
+
+        print(A)
+
+if __name__ == '__main__':
+    a = Solution()
+    print(a.sortColors('00111222120021'))
